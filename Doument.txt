@@ -1,0 +1,86 @@
+﻿PokemonDex
+
+ภาพรวมของโปรแกรม
+
+โปรแกรมนี้เป็น Windows Form Application ที่ใช้สำหรับแสดงข้อมูลของโปเกมอน โดยมีการเก็บข้อมูลของโปเกมอนต่าง ๆ ในคลาส Pokemon และแสดงผลบน UI เมื่อกดปุ่มที่กำหนดไว้
+
+โครงสร้างของโค้ด
+
+1. การประกาศตัวแปร
+
+private List<Pokemon> pokemonsList = new List<Pokemon>();
+private Pokemon pikachu;
+private Pokemon snorlax;
+private Pokemon charmander;
+private Pokemon seel;
+private Pokemon cubone;
+private Pokemon mewtwo;
+
+•pokemonsList เป็น List ที่ใช้เก็บวัตถุของโปเกมอนทั้งหมด
+
+•ตัวแปร Pokemon ถูกสร้างขึ้นเพื่อเก็บวัตถุของโปเกมอนแต่ละตัว
+
+
+2. เมธอด Form1_Load
+
+private void Form1_Load(object sender, EventArgs e)
+
+•ฟังก์ชันนี้ถูกเรียกเมื่อฟอร์มถูกโหลดขึ้นมา
+
+•ทำการสร้างวัตถุโปเกมอนแต่ละตัว เช่น this.pikachu = new Pikachu();
+
+•เพิ่มวัตถุโปเกมอนลงใน pokemonsList
+
+•กำหนดค่าเริ่มต้นของ pictureBox1
+
+
+3. เมธอด displayPokemon
+
+private void displayPokemon(Pokemon pokemon)
+
+•ใช้สำหรับแสดงข้อมูลของโปเกมอนที่เลือกใน UI
+
+•ดึงข้อมูล เช่น ชื่อ, HP, Attack, Defense ฯลฯ จากอ็อบเจ็กต์ pokemon
+
+•แสดงรูปภาพของโปเกมอนจาก MemoryStream
+
+
+4. การจัดการอีเวนต์ปุ่ม
+
+button4_Click - แสดงข้อมูลของ Pikachu
+
+button1_Click - แสดงข้อมูลของ Snorlax
+
+button2_Click_1 - แสดงข้อมูลของ Charmander
+
+button3_Click - แสดงข้อมูลของ Seel
+
+button5_Click - แสดงข้อมูลของ Cubone
+
+button6_Click - แสดงข้อมูลของ Mewtwo
+
+
+5. ปุ่มรีเซ็ต (button7_Click)
+
+private void button7_Click(object sender, EventArgs e)
+
+•รีเซ็ตค่าทั้งหมดใน UI เป็นค่าเริ่มต้น
+
+•รีเซ็ตรูปภาพเป็นค่าเริ่มต้น (Resource1.TE)
+
+
+วิธีการใช้งานโปรแกรม
+
+1.เมื่อเปิดโปรแกรมขึ้นมา โปเกมอนทั้งหมดจะถูกโหลดเข้ามาใน List
+
+2.กดปุ่มที่ต้องการเพื่อแสดงข้อมูลของโปเกมอนตัวนั้น ๆ
+
+3.หากต้องการล้างข้อมูล กดปุ่มรีเซ็ต
+
+
+การพัฒนาเพิ่มเติม
+
+•สามารถเพิ่มโปเกมอนตัวใหม่ได้โดยสร้างคลาสที่สืบทอดจาก Pokemon และเพิ่มลงใน pokemonsList
+
+•ปรับปรุง UI ให้แสดงข้อมูลเพิ่มเติม เช่น ความสามารถพิเศษ หรือวิวัฒนาการของโปเกมอน
+
