@@ -437,7 +437,7 @@
             button7.Name = "button7";
             button7.Size = new Size(357, 76);
             button7.TabIndex = 36;
-            button7.Text = "RESAT";
+            button7.Text = "RESET";
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
